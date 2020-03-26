@@ -1,0 +1,9 @@
+sass/
+*.sass.map
+*.scss.map
+_*.sass.map
+_*.scss.map
+*.sass
+*.scss
+_*.sass
+_*.scss
