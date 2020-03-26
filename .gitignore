@@ -7,3 +7,6 @@ _*.scss.map
 *.scss
 _*.sass
 _*.scss
+css/
+*.css.map
+*.min.css.map
