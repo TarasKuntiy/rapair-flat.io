@@ -34,11 +34,27 @@ img {
   border: none;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .section {
   padding: 50px 0px;
 }
 
+.input {
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  padding: 20px 26px;
+}
+
 @media (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
   .container {
     width: 960px;
   }
@@ -65,7 +81,7 @@ img {
     width: 320px;
   }
   .button {
-    padding: 14px 20px;
+    padding: 12px 18px;
   }
 }
 
@@ -135,9 +151,12 @@ img {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 576px) {
   .navbar__contacts {
     display: none;
+  }
+  .navbar-block {
+    width: 100%;
   }
 }
 
@@ -251,12 +270,12 @@ img {
     font-size: 23px;
   }
   .hero-list__text {
-    max-width: 210px;
+    max-width: 175px;
     font-size: 12px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 670px) {
   .hero-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -264,6 +283,8 @@ img {
             flex-direction: column;
   }
   .hero-text {
+    -ms-flex-preferred-size: 95%;
+        flex-basis: 95%;
     padding-right: 0px;
     max-width: 300px;
   }
@@ -3540,6 +3561,234 @@ img {
     transition-duration: 1ms !important;
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+.offer {
+  background: url("../images/offer/offer-bg.png") no-repeat;
+  background-size: contain;
+  background-position: center right;
+  position: relative;
+}
+
+.offer::before {
+  content: '';
+  background-color: #ffffff;
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.offer-block {
+  width: 50%;
+  color: #333333;
+  padding-right: 90px;
+  position: relative;
+}
+
+.offer__title {
+  max-width: 360px;
+  font-family: "Museo Sans Cyrl -700";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35px;
+  margin-bottom: 24px;
+}
+
+.offer__subtitle {
+  display: inline-block;
+  font-family: "Museo Sans Cyrl -300";
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 235px;
+  margin-bottom: 30px;
+}
+
+.offer__input {
+  margin-bottom: 30px;
+  width: 235px;
+}
+
+.offer__input:first-child {
+  margin-right: 6px;
+}
+
+.offer__button {
+  margin-bottom: 30px;
+  width: 100%;
+  font-family: "Museo Sans Cyrl -700";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.offer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Museo Sans Cyrl -300";
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.offer-info__title {
+  max-width: 225px;
+}
+
+.offer-info__phone {
+  font-family: "Museo Sans Cyrl -700";
+}
+
+@media (max-width: 1200px) {
+  .offer__title {
+    max-width: 335px;
+  }
+  .offer-info {
+    font-size: 14px;
+  }
+  .offer-info__title {
+    max-width: 195px;
+  }
+  .offer__input {
+    width: 182px;
+  }
+}
+
+@media (max-width: 992px) {
+  .offer__button {
+    font-size: 15px;
+  }
+  .offer__input {
+    font-size: 15px;
+  }
+  .offer-info {
+    font-size: 13px;
+  }
+  .offer-info__phone a:hover {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer {
+    background-size: cover;
+  }
+  .offer-block {
+    padding-right: 50px;
+  }
+  .offer__title {
+    font-size: 21px;
+  }
+  .offer__input:first-child {
+    margin-right: 0px;
+  }
+  .offer__input {
+    width: 100%;
+  }
+  .offer__button {
+    font-size: 13px;
+  }
+  .offer-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 12px;
+  }
+  .offer-info__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 355px;
+  }
+  .offer-info__description {
+    font-weight: 400;
+    margin-right: 10px;
+  }
+  .offer-info__subtitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (max-width: 576px) {
+  .offer__title {
+    font-size: 15px;
+  }
+  .offer__subtitle {
+    font-size: 14px;
+  }
+  .offer__input {
+    margin-bottom: 20px;
+  }
+  .offer-info {
+    text-align: center;
+  }
+  .offer-info__title {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .offer-info__subtitle {
+    font-size: 13px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .offer-info__description {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 350px) {
+  .offer {
+    background: #ffffff;
+  }
+  .offer-block {
+    width: 100%;
+    padding-right: 0;
+  }
+  .offer__button {
+    padding: 20px;
+  }
+  .offer__title {
+    font-size: 19px;
+    max-width: 280px;
+  }
+  .offer-subtitle {
+    font-size: 16px;
+  }
+  .offer-info {
+    text-align: justify;
+  }
+  .offer-info__title {
+    font-size: 11px;
+    margin-bottom: 0;
+  }
+  .offer-info__subtitle {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 12px;
+  }
+  .offer-info__description {
+    margin-right: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
